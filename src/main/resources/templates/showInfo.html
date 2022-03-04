@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${employee.getName()}"></p>
+<p th:text="${employee.getSurName()}"></p>
+<p th:text="${employee.getDepartment()}"></p>
+<p th:text="${employee.getSalary()}"></p>
+<a th:href="@{/api/{id}/edit(id=${employee.getId()})}">Edit</a>
+<form th:method="POST" th:action="@{/api/delete/{id}(id=${employee.getId()})}">
+    <input type="submit" value="delete"/>
+</form>
+
+</body>
+</html>

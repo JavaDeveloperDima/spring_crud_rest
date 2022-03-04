@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Person</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/api/update/{id}(id=${employee.getId()})}" th:object="${employee}">
+< <label for="name">Name</label>
+    <input name="text" th:field="*{name}" id="name"/>
+    <br><br>
+    <label for="surName">SurName</label>
+    <input name="text" th:field="*{surName}" id="surName"/>
+    <br><br>
+    <label for="department">Department</label>
+    <input name="text" th:field="*{department}" id="department"/>
+    <br><br>
+    <label for="salary">Salary</label>
+    <input name="text" th:field="*{salary}" id="salary"/>
+    <br><br>
+<input type="submit" value="Update">
+</form>
+</body>
+</html>
